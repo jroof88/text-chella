@@ -11,10 +11,8 @@ def response():
     incoming_number = request.form['From']
 
     if is_user(incoming_number) == False:
-        subscribe(incoming_number)
-        #resp.message(send_todays(incoming_number))
-        #return str(resp)
-        return ''
+        resp.message(subscribe(incoming_number))
+        return str(resp)
     else:
         return ''
 
