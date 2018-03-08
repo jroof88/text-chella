@@ -1,0 +1,5 @@
+Flask == 0.12.2
+pymongo == 3.6.0
+twilio == 6.9.0
+gunicorn == 19.7.1
+APScheduler == 3.5.0
