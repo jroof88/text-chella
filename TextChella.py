@@ -1,5 +1,8 @@
 from pymongo import MongoClient
 
+def get_connection():
+    
+
 def text_chella():
     return 1
 
