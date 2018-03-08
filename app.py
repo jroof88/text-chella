@@ -9,12 +9,12 @@ def response():
 
     incoming_number = request.form['From']
 
-    #if is_user(incoming_number) == false:
-        #subscribe_user(incoming_number)
-        #resp.message(send_todays(incoming_number))
-        #return str(resp)
-    #else:
-        #return ''
+    if is_user(incoming_number) == false:
+        subscribe_user(incoming_number)
+        resp.message(send_todays(incoming_number))
+        return str(resp)
+    else:
+        return ''
 
 if __name__ == "__main__":
     app.run(debug=True)
