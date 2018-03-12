@@ -1,8 +1,9 @@
+from TextChella import text_chella
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('cron', hour=19, minute=5, timezone='US/Pacific')
+@sched.scheduled_job('cron', hour=19, minute=8, timezone='US/Pacific')
 def send_text():
     text_chella()
     
