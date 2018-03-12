@@ -24,10 +24,11 @@ def get_todays_artist():
 	dbClient = get_connection()
 	db = dbClient['textchella']
 	days = days_until_coachella()
-	print(days)
 	result = db.ArtistInfo.find({
 		"Day": str(days)
 	})
+
+	print(result.count())
 	
 	artist_name = ""
 	artist_genre = ""
