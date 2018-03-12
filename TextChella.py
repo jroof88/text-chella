@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import datetime
+import emoji
 from datetime import date
 from twilio.rest import Client
 
@@ -45,6 +46,7 @@ def get_todays_artist():
 		artist_description = artist["ArtistDescription"]
 		artist_link = artist["SpotifyLink"]
 
+	print(print(emoji.emojize('Python is :sun_with_face:')))
 	message = "Good Morning!" + "\n\n" + str(days) + " days until the festival!" + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
 	return message
