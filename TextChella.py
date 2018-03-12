@@ -39,7 +39,7 @@ def get_todays_artist():
 		artist_description = artist["ArtistDescription"]
 		artist_link = artist["SpotifyLink"]
 
-	message = "Good Morning!" + "\n\n" + str(days) + " until the festival!" + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
+	message = "Good Morning!" + "\n\n" + str(days) + " days until the festival!" + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
 	print(message)
 	return message
