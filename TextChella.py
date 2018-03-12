@@ -14,6 +14,8 @@ def get_connection():
 	return MongoClient("mongodb://"+user+":"+password+"@"+mlab_url)
     
 def text_chella():
+	dbClient = get_connection()
+	db = dbClient['textchella']
 	print("inside scheduled function")
 	todays_artist = get_todays_artist()
 	print(todays_artist)
