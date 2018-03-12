@@ -48,7 +48,7 @@ def get_todays_artist():
 
 	# print(print(emoji.emojize('Python is :sun_with_face:')))
 	sun_emoji = emoji.emojize(' :sun_with_face:')
-	tree_emoji = emoji.emojize(':palm_tree:')
+	tree_emoji = emoji.emojize(' :palm_tree:')
 	message = "Good Morning!" + sun_emoji + "\n\n" + str(days) + " days until the festival!" + tree_emoji + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
 	return message
