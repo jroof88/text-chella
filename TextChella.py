@@ -41,7 +41,6 @@ def get_todays_artist():
 
 	message = "Good Morning!" + "\n\n" + days + " until the festival!" + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
-	print(message)	
 	return message
 	
 def days_until_coachella():

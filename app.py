@@ -11,7 +11,8 @@ def response():
     incoming_number = request.form['From']
 
     if is_user(incoming_number) == False:
-        resp.message(subscribe(incoming_number))
+        msg = subscribe(incoming_number)
+        resp.message(msg)
         return str(resp)
     else:
         return ''
