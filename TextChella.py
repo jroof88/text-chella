@@ -16,9 +16,11 @@ def get_connection():
 def text_chella():
 	todays_artist = get_todays_artist()
 	users = db.Users.find()
+	print(users.count())
 	load_analytics(users.count())
 	for user in users:
 		client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
+
 		
 def get_todays_artist():
 	dbClient = get_connection()
@@ -54,8 +56,8 @@ def load_analytics(num_users):
 	dbClient = get_connection()
 	db = dbClient['textchella']
 	db.Analytics.insert({
-		"NumUsers": num_users,
-		"days": days
+		"NumUsers": str(num_users),
+		"days": str(days)
 	})
 
 def is_user(phone_number):
