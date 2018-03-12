@@ -39,7 +39,7 @@ def get_todays_artist():
 		artist_description = artist["ArtistDescription"]
 		artist_link = artist["SpotifyLink"]
 		
-	return "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
+	return "Good Morning!" + "\n\n" + days + " until the festival!" + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
 def days_until_coachella():
 	date_of_chella = datetime.datetime(2018, 4, 14, 0, 0)
