@@ -16,6 +16,7 @@ def get_connection():
 def text_chella():
 	print("inside scheduled function")
 	todays_artist = get_todays_artist()
+	print(todays_artist)
 	users = db.Users.find()
 	print(users.count())
 	load_analytics(users.count())
