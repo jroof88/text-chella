@@ -12,6 +12,7 @@ def response():
 
     if is_user(incoming_number) == False:
         msg = subscribe(incoming_number)
+        print(msg)
         resp.message(msg)
         return str(resp)
     else:
