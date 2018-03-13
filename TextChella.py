@@ -27,7 +27,7 @@ def text_chella():
 		client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
 
 		
-def get_todays_artist():
+def get_todays_artist(new_user=False):
 	dbClient = get_connection()
 	db = dbClient['textchella']
 	days = days_until_coachella()
@@ -48,9 +48,12 @@ def get_todays_artist():
 
 	sun_emoji = emoji.emojize(' :sun_with_face:')
 	tree_emoji = emoji.emojize(' :palm_tree:')
-	message = "Good Morning!" + sun_emoji + "\n\n" + str(days) + " days until the festival!" + tree_emoji + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
+	message = sun_emoji + "\n\n" + str(days) + " days until the festival!" + tree_emoji + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
-	return message
+	if new_user:
+		return "Welcome to Text Chella!" + message
+		
+	return "Good Morning!" + message
 	
 def days_until_coachella():
 	date_of_chella = datetime.datetime(2018, 4, 14, 0, 0)
@@ -83,7 +86,7 @@ def subscribe(phone_number):
 	user_collection.insert({
 		"UserNumber": phone_number
 	})
-	return get_todays_artist()
+	return get_todays_artist(new_user=True)
 	
 if __name__ == '__main__':
 	print(get_todays_artist())
