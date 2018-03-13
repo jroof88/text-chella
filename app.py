@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template
-from TextChella import is_user, subscribe
+from TextChella import is_user, subscribe, delete_user
 from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
@@ -9,6 +9,13 @@ def response():
     resp = MessagingResponse()
 
     incoming_number = request.form['From']
+    incoming_message = request.form['Body']
+
+    blacklist_words = ["STOP", "STOPALL", "UNSUBSCRIBE", "CANCEL", "END", "QUIT"]
+    
+    if incoming_message.upper() in blacklist_words:
+        delete_user(incoming_number)
+        return ''
 
     if is_user(incoming_number) == False:
         msg = subscribe(incoming_number)

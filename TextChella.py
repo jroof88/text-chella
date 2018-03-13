@@ -84,3 +84,11 @@ def subscribe(phone_number):
 		"UserNumber": phone_number
 	})
 	return get_todays_artist(new_user=True)
+	
+def delete_user(phone_number):
+	dbClient = get_connection()
+	db = dbClient['textchella']
+	db.Users.delete_one({
+		"UserNumber": phone_number
+	})
+	
