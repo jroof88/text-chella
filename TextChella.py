@@ -17,11 +17,8 @@ def get_connection():
 def text_chella():
 	dbClient = get_connection()
 	db = dbClient['textchella']
-	print("inside scheduled function")
 	todays_artist = get_todays_artist()
-	print(todays_artist)
 	users = db.Users.find()
-	print(users.count())
 	load_analytics(users.count())
 	for user in users:
 		client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
@@ -87,6 +84,3 @@ def subscribe(phone_number):
 		"UserNumber": phone_number
 	})
 	return get_todays_artist(new_user=True)
-	
-if __name__ == '__main__':
-	print(get_todays_artist())
