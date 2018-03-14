@@ -90,11 +90,4 @@ def delete_user(phone_number):
 	db = dbClient['textchella']
 	result = db.Users.delete_one({
 		"UserNumber": phone_number
-	})
-
-
-
-
-
-
-	
+	})	
