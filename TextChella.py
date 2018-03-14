@@ -96,7 +96,7 @@ def delete_user(phone_number):
 		"UserNumber": phone_number
 	})
 
-	print(result.count())
+	print(result.deleted_count)
 
 
 
