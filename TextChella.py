@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import datetime
+import pytz
 import emoji
 from datetime import date
 from twilio.rest import Client
@@ -53,8 +54,8 @@ def get_todays_artist(new_user=False):
 	return "Good Morning!" + message
 	
 def days_until_coachella():
-	date_of_chella = datetime.datetime(2018, 4, 14, 0, 0)
-	todays_date = datetime.datetime.now()
+	date_of_chella = datetime.datetime(2018, 4, 14, 0, 0, 0, 0, pytz.PST)
+	todays_date = datetime.datetime.now(tz=pytz.PST)
 	diff = date_of_chella - todays_date
 	return diff.days
 
@@ -88,15 +89,9 @@ def subscribe(phone_number):
 def delete_user(phone_number):
 	dbClient = get_connection()
 	db = dbClient['textchella']
-
-	print(phone_number)
-
-
 	result = db.Users.delete_one({
 		"UserNumber": phone_number
 	})
-
-	print(result.deleted_count)
 
 
 
