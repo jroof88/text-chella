@@ -88,7 +88,19 @@ def subscribe(phone_number):
 def delete_user(phone_number):
 	dbClient = get_connection()
 	db = dbClient['textchella']
-	db.Users.delete_one({
+
+	print(phone_number)
+
+
+	result = db.Users.delete_one({
 		"UserNumber": phone_number
 	})
+
+	print(result.count())
+
+
+
+
+
+
 	
