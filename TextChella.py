@@ -48,6 +48,7 @@ def get_todays_artist(new_user=False):
 	message = sun_emoji + "\n\n" + str(days) + " days until the festival!" + tree_emoji + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
 	if new_user:
+
 		return "Welcome to Text Chella!" + message
 		
 	return "Good Morning!" + message
@@ -78,11 +79,14 @@ def is_user(phone_number):
 		return True
     
 def subscribe(phone_number):
-	client = get_connection()
-	user_collection = client['textchella']['Users']
+	dbClient = get_connection()
+	user_collection = dbClient['textchella']['Users']
 	user_collection.insert({
 		"UserNumber": phone_number
 	})
+
+	new_subscriber_message = "New Subscriber! :" + str(phone_number)
+	client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message) 
 	return get_todays_artist(new_user=True)
 	
 def delete_user(phone_number):
