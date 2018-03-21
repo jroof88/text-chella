@@ -86,7 +86,8 @@ def subscribe(phone_number):
 	})
 
 	new_subscriber_message = "New Subscriber! :" + str(phone_number)
-	client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message) 
+	client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message)
+	client.messages.create(to="+12038565701", from_="+16505390580", body=new_subscriber_message) 
 	return get_todays_artist(new_user=True)
 	
 def delete_user(phone_number):
