@@ -16,13 +16,13 @@ def response():
     if incoming_message.upper() in blacklist_words:
         delete_user(incoming_number)
         return ''
-
-    if is_user(incoming_number) == False:
-        msg = subscribe(incoming_number)
-        resp.message(msg)
-        return str(resp)
     else:
-        return ''
+        if is_user(incoming_number) == False:
+            msg = subscribe(incoming_number)
+            resp.message(msg)
+            return str(resp)
+        else:
+            return ''
 
 if __name__ == "__main__":
     app.run(debug=True)
