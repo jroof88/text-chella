@@ -1,17 +1,18 @@
 from pymongo import MongoClient
+import os
 import datetime
 import emoji
 from datetime import date
 from twilio.rest import Client
 
-username = 'ACbdc10bdbf54d948807715fde6396ad07' #Auth_SID
-password = '62bdcbe9eff5290f18df55601b33e9f9'	#Auth_Token
+username = os.environ['TWILIO_SID'] #Auth_SID
+password = os.environ['TWILIO_TOKEN']	#Auth_Token
 client = Client(username, password)
 
 def get_connection():
-	user = "textchella"
-	password = "textchella123"
-	mlab_url = "ds261678.mlab.com:61678/textchella"
+	user = os.environ['MLAB_USER']
+	password = os.environ['MLAB_PW']
+	mlab_url = os.environ['MLAB_LINK']
 	return MongoClient("mongodb://"+user+":"+password+"@"+mlab_url)
     
 def text_chella():
@@ -48,7 +49,6 @@ def get_todays_artist(new_user=False):
 	message = sun_emoji + "\n\n" + str(days) + " days until the festival!" + tree_emoji + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 	
 	if new_user:
-
 		return "Welcome to Text Chella!" + message
 		
 	return "Good Morning!" + message
