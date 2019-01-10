@@ -30,7 +30,7 @@ def text_chella():
     num_users = users.count()
     send_report(num_users, days_until_coachella())
     # load_analytics(num_users)
-    
+
     test_users = [
         {
             "_id": "Sanjay",
@@ -39,8 +39,21 @@ def text_chella():
         {
             "_id": "Jack",
             "UserNumber": "+12038565701"
+        },
+        {
+            "_id": "McKenna",
+            "UserNumber": "+16506199010"
+        },
+        {
+            "_id": "Jordan",
+            "UserNumber": "+18478484251"
+        },
+        {
+            "_id": "Mash",
+            "UserNumber": "+19167593968"
         }
     ]
+
     for user in test_users:
         twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
 
