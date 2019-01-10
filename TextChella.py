@@ -26,12 +26,19 @@ def text_chella():
 	# for user in users:
 	# 	client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
 
-	# test_users = {
- #    	"_id" : "Sanjay"
- #    	"UserNumber": "+19164708305"
-	# }
+	test_users = [
+		{
+    	"_id" : "Sanjay"
+    	"UserNumber": "+19164708305"
+    	},
+    	{
+    	"_id" : "Jack"
+    	"UserNumber": "+12038565701"
+    	}
+	]
 
-	# client.messages.create(to=test_users["UserNumber"], from_="+16505390580", body= "Hello World")
+	for user in test_users:
+		client.messages.create(to=user["UserNumber"], from_="+16505390580", body= "Hello World")
 
 
 
