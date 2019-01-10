@@ -1,3 +1,4 @@
 *.py[cod]
 .webassets-cache
 .git
+.idea/
