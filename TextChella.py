@@ -17,6 +17,7 @@ def get_connection():
 
     
 def text_chella():
+	pass
 	# dbClient = get_connection()
 	# db = dbClient['textchella']
 	# todays_artist = get_todays_artist()
