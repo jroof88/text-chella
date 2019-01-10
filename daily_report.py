@@ -22,7 +22,7 @@ def send_report(num_users, days_until_coachella):
 def generate_report(num_users, days_until_coachella):
     report = MIMEMultipart('mixed')
     report['From'] = 'textchella@gmail.com'
-    report['Subject'] = 'Text Chella Daily Report For' + datetime.datetime.today().strftime('%Y-%m-%d')
+    report['Subject'] = 'Text Chella Daily Report For ' + datetime.datetime.today().strftime('%m-%d-%Y')
     report_body = MIMEText('Good Morning! \n' +
                            'Days until the Festival: ' + str(days_until_coachella) + '\n' 
                            'Daily Subscribers: ' + str(num_users) + '\n'

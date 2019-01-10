@@ -4,7 +4,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job('cron', hour=21, minute=42, timezone='US/Pacific')
+@sched.scheduled_job('cron', hour=21, minute=50, timezone='US/Pacific')
 def send_text():
     text_chella()
 
