@@ -14,15 +14,25 @@ def get_connection():
 	password = os.environ['MLAB_PW']
 	mlab_url = os.environ['MLAB_LINK']
 	return MongoClient("mongodb://"+user+":"+password+"@"+mlab_url)
+
     
 def text_chella():
-	dbClient = get_connection()
-	db = dbClient['textchella']
-	todays_artist = get_todays_artist()
-	users = db.Users.find()
-	load_analytics(users.count())
-	for user in users:
-		client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
+	# dbClient = get_connection()
+	# db = dbClient['textchella']
+	# todays_artist = get_todays_artist()
+	# users = db.Users.find()
+	# load_analytics(users.count())
+	# for user in users:
+	# 	client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
+
+	test_users = {
+    	"_id" : "Sanjay"
+    	"UserNumber": "+19164708305"
+	}
+
+	client.messages.create(to=test_users["UserNumber"], from_="+16505390580", body= "Hello World")
+
+
 
 		
 def get_todays_artist(new_user=False):
@@ -52,6 +62,8 @@ def get_todays_artist(new_user=False):
 		return "Welcome to Text Chella!" + message
 		
 	return "Good Morning!" + message
+
+
 	
 def days_until_coachella():
 	date_of_chella = datetime.datetime(2018, 4, 14, 0, 0)
@@ -77,22 +89,35 @@ def is_user(phone_number):
 		return False
 	else:
 		return True
+
+
     
 def subscribe(phone_number):
-	dbClient = get_connection()
-	user_collection = dbClient['textchella']['Users']
-	user_collection.insert({
-		"UserNumber": phone_number
-	})
+	# dbClient = get_connection()
+	# user_collection = dbClient['textchella']['Users']
+	# user_collection.insert({
+	# 	"UserNumber": phone_number
+	# })
 
-	new_subscriber_message = "New Subscriber! :" + str(phone_number)
-	client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message)
-	client.messages.create(to="+12038565701", from_="+16505390580", body=new_subscriber_message) 
-	return get_todays_artist(new_user=True)
+	# new_subscriber_message = "New Subscriber! :" + str(phone_number)
+	# client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message)
+	# client.messages.create(to="+12038565701", from_="+16505390580", body=new_subscriber_message) 
+	# return get_todays_artist(new_user=True)
+
+	print(phone_number)
+	return "Hello new user!"
+
+
+
 	
 def delete_user(phone_number):
 	dbClient = get_connection()
 	db = dbClient['textchella']
 	result = db.Users.delete_one({
 		"UserNumber": phone_number
-	})	
+	})
+	
+
+
+
+
