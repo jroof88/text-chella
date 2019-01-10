@@ -1,224 +1,34 @@
-[{
-"ArtistName": "Jungle",
-"ArtistGenre": "Funk",
-"ArtistDescription": "A group formed in London during 2013, Jungle is an atmoshperic blend of 70's funk and soul with a modern touch.",
-"SpotifyLink": "https://open.spotify.com/track/07tOsOR7E9zW89v2FqzsdG?si=shXTDc9GR9-UO7m00UIGjQ",
-"Day": "32"
-},
-{
-"ArtistName": "Migos",
-"ArtistGenre": "Rap",
-"ArtistDescription": "While their rise to fame was somewhere between fast and meteoric, the Atlanta trio Migos are steeped in the southern tradition of hip-hop groups, having me together over their shared love of acts like The Hot Boys and Outkast.",
-"SpotifyLink": "https://open.spotify.com/track/4BHzHISX21PYwGXiBEUQ70?si=7R_oeZCpTRO9rdT-jUIFvw",
-"Day": "31"
-},
-{
-"ArtistName": "Louis The Child",
-"ArtistGenre": "EDM",
-"ArtistDescription": "Three years after meeting at a Madeon concert, the electronic pop production duo Louis the Child would open one of his shows. The Chicago area pair went to the same high school before joining forces to produce an infectious blend of EDM and pop.",
-"SpotifyLink": "https://open.spotify.com/track/4v0134PgBTGsFJiGcV4eJk?si=dPENOoYnTS6OkR6zm_lOEQ",
-"Day": "30"
-},  
-{
-"ArtistName": "Snakehips",
-"ArtistGenre": "EDM",
-"ArtistDescription": "Snakehips are a UK-based left-field downtempo synthesis of several different genres, including rap, electronic, and R&B",
-"SpotifyLink": "https://open.spotify.com/track/4yvKqltUO2ogccevjmT5Yc?si=NLyD7DI3SUyMxyaI8EBylw",
-"Day": "29"
-},
-{
-"ArtistName": "Declan McKenna",
-"ArtistGenre": "indie",
-"ArtistDescription": "Only 19 years of age, this British indie songwriter first emerged in 2015 and is one of the hottest up-and-coming artists in the UK indie scene.",
-"SpotifyLink": "https://open.spotify.com/track/4sNG6zQBmtq7M8aeeKJRMQ?si=oehh6B7SS6yJaMP2tlvHGw",
-"Day": "28"
-},
-{
-"ArtistName": "Giraffage",
-"ArtistGenre": "Electronic",
-"ArtistDescription": "Based in San Francsico, electronic music producer Giraffage earned a considerable amount of acclaim for his dreamy melancholic sample-based songs that are influenced by R&B, J-pop, and ambient music.",
-"SpotifyLink": "https://open.spotify.com/track/7mb8p8MJ6zZUgu7b0mKDel?si=XhH7JorRSKmuQrc3boQ5Jg",
-"Day": "27"
-},
-{
-"ArtistName": "Portugal. The Man ",
-"ArtistGenre": "Psychedelic-Rock",
-"ArtistDescription": "An American psychedelic rock band from Wasilla, Alaska, PTM is known for their intricate live sets blending a variety of genres.",
-"SpotifyLink": "https://open.spotify.com/track/60eOMEt3WNVX1m1jmApmnX?si=GyC1PguQQTuvG503aidqyA",
-"Day": "26"
-},
-{
-"ArtistName": "Busy P",
-"ArtistGenre": "House/Electronic",
-"ArtistDescription": "DJ/producer Busy P has been deeply involved in the French electronic music scene, managing Daft Punk in the 90's. A staple of the Parisian house genre.",
-"SpotifyLink": "https://open.spotify.com/track/1zwodY1UBMOcW4WxB35t4W?si=MApuClllQquxCleNFwvgbA",
-"Day": "25"
-},
-{
-"ArtistName": "BROCKHAMPTON",
-"ArtistGenre": "Rap",
-"ArtistDescription": "Bio provided by the artist - BROCKHAMPTON, THE WORLD'S GREATEST BOYBAND.",
-"SpotifyLink": "https://open.spotify.com/track/1xfFPJdRjgDAaMcDgbXwyh?si=0PX3_amwSnOo8K9zraoGzA",
-"Day": "24"
-},
-{
-"ArtistName": "Fleet Foxes",
-"ArtistGenre": "Folk/Indie",
-"ArtistDescription": "Emerging in 2008 to widespread acclaim, Seattle's Fleet Foxes fused earthy, harmony-rich indie folk with a sense of lush pop sophistication.",
-"SpotifyLink": "https://open.spotify.com/track/18ycL9Q5zLDeY9M2Lr3Ozw?si=as4nwXwpRquBKsMDif2Jgw",
-"Day": "23"
-},
-{
-"ArtistName": "Post Malone",
-"ArtistGenre": "R&B",
-"ArtistDescription": "Dallas-based MC Austin Malone drops basketball references like the old-school but wraps them in thoroughly modern beats.",
-"SpotifyLink": "https://open.spotify.com/track/65NwOZqoXny4JxqAPlfxRF?si=FClJitkKTxCgotGhoQy1sQ",
-"Day": "22"
-},
-{
-"ArtistName": "Rezz",
-"ArtistGenre": "Electronic",
-"ArtistDescription": "From Niagara Falls, Ontario, Rezz fell in love with EDM when she snuck into Toronto nightclubs in her teens. She then began DJ'ing at age 16 and making her own dark, minimal-inspired productions soon after.",
-"SpotifyLink": "https://open.spotify.com/track/3oDXLJTEs6YX1gJD3aOsnZ?si=DKU2ODksTzylPUD4iFI6vQ",
-"Day": "21"
-},
-{
-"ArtistName": "Bleachers",
-"ArtistGenre": "Alternative",
-"ArtistDescription": "NY based musician Jack Antonoff, who was a part of the critically acclaimed band Fun, now embarks on the creation of a record to capture the sounds of New York and New Jersey.",
-"SpotifyLink": "https://open.spotify.com/track/1BwhFXqoIsePt21WyWIttb?si=zwAZ9nuLT9m5sl0JZt_96A",
-"Day": "20"
-},
-{
-"ArtistName": "Ekali",
-"ArtistGenre": "Trap",
-"ArtistDescription": "I like to call this guy RL Grime Junior. He's fucking dope, check him out.",
-"SpotifyLink": "https://open.spotify.com/track/089tprIgsyFSOrZpugamLI?si=_XgrOY7iT2yRYo5dAih-pg",
-"Day": "19"
-},
-{
-"ArtistName": "Jorja Smith",
-"ArtistGenre": "R&B",
-"ArtistDescription": "An English R&B singer/songwriter whose soulful, jazz-tinged cadence, heartfelt lyrics, and retro sound invoke names like Lauryn Hill, Rihanna, and Amy Winehouse.",
-"SpotifyLink": "https://open.spotify.com/track/1OxL1FWSEd7QmJoWLRP2NO?si=wX0NEx4jScq0e-uqwALQ3w",
-"Day": "18"
-},
-{
-"ArtistName": "The Blaze",
-"ArtistGenre": "House/Ambient",
-"ArtistDescription": "French producer/director tandem The Blaze kicked off the past year with a brand new EP as well as accompanying filmography.",
-"SpotifyLink": "https://open.spotify.com/track/5YzaostcCu9Sgp5T7bFuX3?si=tdnM8SVoSJCkeyZ_fqMbaQ",
-"Day" : "17"
-},
-{
-"ArtistName": "Greta Van Fleet",
-"ArtistGenre": "Rock",
-"ArtistDescription": "A quartet of millenial guys who are out of step with their age: they're unapologetic throwbacks to the golden era of classic rock.",
-"SpotifyLink": "https://open.spotify.com/track/7aOor99o8NNLZYElOXlBG1?si=pMcJoeH4SeaJvArKXD2ekg",
-"Day" : "16"
-},
-{
-"ArtistName": "LANY",
-"ArtistGenre": "Pop",
-"ArtistDescription": "LANY blend smooth eclectic indie instrumentals with pop sensibilities producing a unique sound.",
-"SpotifyLink": "https://open.spotify.com/track/2kMKmb60xVUIWW2Out8ypz?si=QRo6T_y_TWqep2PxTc3FCA",
-"Day" : "15"
-},
-{
-"ArtistName": "Alison Wonderland",
-"ArtistGenre": "EDM/Trap",
-"ArtistDescription": "A mix of digital-pop and incendiary beats, this Sydney-born singer/producer/DJ blazes new territory with her new album Awake.",
-"SpotifyLink": "https://open.spotify.com/track/6wb61u8ayuanWSHZzle5od?si=0ph4XjyTTe2JYUbxMUD4XQ",
-"Day" : "14"
-},
-{
-"ArtistName": "Borns",
-"ArtistGenre": "indie/Alternative",
-"ArtistDescription": "Michigan native Garret Borns crafts big-hearted, alternately dreamy, and danceable, falsetto-driven electropop.",
-"SpotifyLink": "https://open.spotify.com/track/2pA4ip3VIEVcIa3qE02oAX?si=sPMN2a9YTeeQwMp3kcXY2A",
-"Day" : "13"
-},
-{
-"ArtistName": "Motor City Drum Ensemble",
-"ArtistGenre": "House",
-"ArtistDescription": "The primary alias of Danilo Plessow, a house producer and DJ from Stuttgart, Germany.",
-"SpotifyLink": "https://open.spotify.com/track/7kcUCIpVBK6w1OwoiiPSpi?si=-k9i17rvSE-vu6H_Nb1C1Q",
-"Day" : "12"
-},
-{
-"ArtistName": "ELOHIM",
-"ArtistGenre": "electronic/alternative",
-"ArtistDescription": "A L.A. based one-woman show, ELOHIM is an electronic/alternative act that guarantees to grab your attention and not let go.",
-"SpotifyLink": "https://open.spotify.com/track/73Iqj95DzfjzhRdzZ8jEIY?si=DGRlEI1XQU-twvzu2QH2lw",
-"Day" : "11"
-},
-{
-"ArtistName": "The Neighbourhood",
-"ArtistGenre": "R&B/Alternative",
-"ArtistDescription": "Hailing from Thousand Oaks, California, this band brings a hip-hop and R&B influenced take to moody alternative music. ",
-"SpotifyLink": "https://open.spotify.com/track/1w553LQgqi5Wr1EbnPe2bB?si=8sU6asb5QrK_2o4-_3cADw",
-"Day" : "10"
-},
-{
-"ArtistName": "Slow Magic",
-"ArtistGenre": "Electronic",
-"ArtistDescription": "An expansive and inventive compendium of modern electro pop, this enigmatic producer's latest spans a multitude of genres and moods.",
-"SpotifyLink": "https://open.spotify.com/track/0TaLEGNb6f3nL2VME9SxAR?si=9FVCQWSDQpiPyETtA9BJwg",
-"Day" : "9"
-},
-{
-"ArtistName": "Tash Sultana",
-"ArtistGenre": "Indie",
-"ArtistDescription": "An Australian artist creating waves and generating massive street buzz by playing sold out shows all over the world",
-"SpotifyLink": "https://open.spotify.com/track/27mUJCOF7QrbPJJ0QWdWMl?si=J3AbsPvrTVGVN8nFrLN7Fg",
-"Day" : "8"	
-},
-{
-"ArtistName": "The Drums",
-"ArtistGenre": "indie",
-"ArtistDescription": "Mixing Factory Records-style indie and 50s inspired melodies, The Drums is the project of singer/songwriter Johnny Pierce.",
-"SpotifyLink": "https://open.spotify.com/track/6113aOfHIC0vbZVDZ6PpRV?si=PHT0MnXUS0aI2B08xWMSMQ",
-"Day" : "7"
-},
-{
-"ArtistName": "San Holo",
-"ArtistGenre": "EDM",
-"ArtistDescription": "Dutch bass producer San Holo blurs the line between EDM genres in the pursuit of creative freedom. Originally built up a following on Soundcloud through his remixes.",
-"SpotifyLink": "https://open.spotify.com/track/3R7Y4q7kECcZkT5LCn8QP5?si=BI9qO09xT7O-U2srSfQwJw",
-"Day" : "6"
-},
-{
-"ArtistName": "Cash Cash",
-"ArtistGenre": "EDM",
-"ArtistDescription": "Cash Cash mix electro, pop, and dance, and are a trio of friends hailing from Roseland, New Jersey.",
-"SpotifyLink": "https://open.spotify.com/track/7nwGvxqSrgAuty1tlPGCFz?si=yzeNDMUgRDOoNIHCn-mMyg",
-"Day" : "5"
-},
-{
-"ArtistName": "Miguel",
-"ArtistGenre": "R&B",
-"ArtistDescription": "Singer, songwriter, and producer Miguel spent a handful of years behind the scenes prior to his breakthrough as a Grammy-winning specialist in carnal pop-R&B ballads.",
-"SpotifyLink": "https://open.spotify.com/track/5WoaF1B5XIEnWfmb5NZikf?si=E1nUTuYmQkCQc_Yu3tw5LA",
-"Day" : "4"	
-},
-{
-"ArtistName": "Amine",
-"ArtistGenre": "Rap/R&B",
-"ArtistDescription": "A fresh new blend of R&B and hip-hop with smooth blends and creative lyrical effort.",
-"SpotifyLink": "https://open.spotify.com/track/4HW5kSQ8M2IQWZhSxERvla?si=ZlzBByq1SveA93o31RGCTg",
-"Day" : "3"	
-},
-{
-"ArtistName": "Whethan",
-"ArtistGenre": "EDM",
-"ArtistDescription": "18-year old producer Whethan is praised across the internet for his chart-toping and forward thinking releases having accumulated streams in the millions.",
-"SpotifyLink": "https://open.spotify.com/track/0kD586ste6xyDRqUYhVlCh?si=R2Ku9gVpQRuZD1Awol_5Dw",
-"Day" : "2"	
-},
-{
-"ArtistName": "ODESZA",
-"ArtistGenre": "Electronic",
-"ArtistDescription": "ODESZA returns with its long-anticipated third album, a body of work filled with longing, hope, and unity.",
-"SpotifyLink": "https://open.spotify.com/track/2eMh8ISgK9dylE51SJUixA?si=IVeRWNZVQ3aVCWFT8n8lfA",
-"Day" : "1"	
-}]
+[
+ {
+    "ArtistName": "Mac Demarco",
+    "ArtistGenre": "Indie",
+    "SongName": "Salad Days",
+    "ArtistDescription": "Mac Demarco is a canadian singer, multi-instrumentalist, and producer. His style of music has been described as blue wave and slacker rock or by DeMarco himself jizz jazz",
+    "SpotifyLink": "https://open.spotify.com/track/4keAoywVf4jxRvXU7ON0hV?si=g1KR7qIJSCGkFoxaob2hhQ",
+    "Day": "92"
+  },
+ {
+    "ArtistName": "Gorgon City",
+    "ArtistGenre": "Electronic",
+    "SongName": "Ready For Your Love",
+    "ArtistDescription": "Hailing from the UK, Gorgon City's of bass-driven house music and addictive vocals has established the duo as one of the most in-demand electronic acts in the industry.",
+    "SpotifyLink": "https://open.spotify.com/track/5wGLQvq6JoxYZX7V3ymPS5?si=q_M1aw1SQUGZxmkx1b0H-Q",
+    "Day": "91"
+  },
+  {
+    "ArtistName": "Dusky",
+    "ArtistGenre": "House",
+    "SongName": "Careless",
+    "ArtistDescription": "London House Duo Dusky rode the early 2010s house revival to success and would end up signing to Above and Beyond's Anjunadeep label. Known for their funky, tribal, deep house style.",
+    "SpotifyLink": "https://open.spotify.com/track/5yaGDSfEvvmmLl4yJBIRa6?si=PWI4pohQQTSmgrZrUZJaUA",
+    "Day": "90"
+  },
+  {
+    "ArtistName": "NGHTMRE",
+    "ArtistGenre": "EDM",
+    "SongName": "GUD VIBRATIONS",
+    "ArtistDescription": "Known for his meticulous productions and pulsating live performances, NGHTMRE has released a series of collaborations and VIP remixes that have continued to see massive play across festivals.",
+    "SpotifyLink": "https://open.spotify.com/track/2BVUOGciUUUqOPSLtHwLGp?si=aryXldQbS1C_49_9DkM2Fw",
+    "Day": "89"
+  }
+]

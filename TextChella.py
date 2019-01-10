@@ -17,29 +17,23 @@ def get_connection():
 
     
 def text_chella():
-	pass
-	# dbClient = get_connection()
-	# db = dbClient['textchella']
-	# todays_artist = get_todays_artist()
+	dbClient = get_connection()
+	db = dbClient['textchella']
+	todays_artist = get_todays_artist()
 	# users = db.Users.find()
-	# load_analytics(users.count())
-	# for user in users:
-	# 	client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
-
-	test_users = [
+	users = [
 		{
-    	"_id" : "Sanjay",
-    	"UserNumber" : "+19164708305"
+    		"_id" : "Sanjay",
+    		"UserNumber" : "+19164708305"
     	},
     	{
-    	"_id" : "Jack",
-    	"UserNumber" : "+12038565701"
+    		"_id" : "Jack",
+    		"UserNumber" : "+12038565701"
     	}
 	]
-
-	for user in test_users:
-		client.messages.create(to=user["UserNumber"], from_="+16505390580", body= "Hello World")
-
+	#load_analytics(users.count())
+	for user in users:
+		client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
 
 
 		
@@ -74,7 +68,7 @@ def get_todays_artist(new_user=False):
 
 	
 def days_until_coachella():
-	date_of_chella = datetime.datetime(2018, 4, 14, 0, 0)
+	date_of_chella = datetime.datetime(2019, 4, 12, 0, 0)
 	todays_date = datetime.datetime.now()
 	diff = date_of_chella - todays_date
 	return diff.days
@@ -101,16 +95,16 @@ def is_user(phone_number):
 
     
 def subscribe(phone_number):
-	# dbClient = get_connection()
-	# user_collection = dbClient['textchella']['Users']
-	# user_collection.insert({
-	# 	"UserNumber": phone_number
-	# })
+	dbClient = get_connection()
+	user_collection = dbClient['textchella']['Users']
+	user_collection.insert({
+		"UserNumber": phone_number
+	})
 
-	# new_subscriber_message = "New Subscriber! :" + str(phone_number)
-	# client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message)
-	# client.messages.create(to="+12038565701", from_="+16505390580", body=new_subscriber_message) 
-	# return get_todays_artist(new_user=True)
+	new_subscriber_message = "New Subscriber! :" + str(phone_number)
+	client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message)
+	client.messages.create(to="+12038565701", from_="+16505390580", body=new_subscriber_message) 
+	return get_todays_artist(new_user=True)
 
 	print(phone_number)
 	return "Hello new user!"
