@@ -27,10 +27,19 @@ def text_chella():
     users = db.Users.find()
     num_users = users.count()
     send_report(num_users, days_until_coachella())
-    load_analytics(num_users)
-    for user in users:
+    # load_analytics(num_users)
+    test_users = [
+        {
+            "_id": "Sanjay",
+            "UserNumber": "+19164708305"
+        },
+        {
+            "_id": "Jack",
+            "UserNumber": "+12038565701"
+        }
+    ]
+    for user in test_users:
         twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
-
 
 def get_todays_artist(new_user=False):
     db_client = get_connection()
