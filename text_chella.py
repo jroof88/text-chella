@@ -23,11 +23,14 @@ def text_chella():
     twilio_client = get_twilio_client()
     db_client = get_connection()
     db = db_client['textchella']
+
     todays_artist = get_todays_artist()
+
     users = db.Users.find()
     num_users = users.count()
     send_report(num_users, days_until_coachella())
     # load_analytics(num_users)
+    
     test_users = [
         {
             "_id": "Sanjay",
