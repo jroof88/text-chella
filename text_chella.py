@@ -33,23 +33,19 @@ def text_chella():
 
     test_users = [
         {
-            "_id": "Sanjay",
+            "id": "Sanjay",
             "UserNumber": "+19164708305"
         },
         {
-            "_id": "Jack",
+            "id": "Jack",
             "UserNumber": "+12038565701"
         },
         {
-            "_id": "McKenna",
+            "id": "McKenna",
             "UserNumber": "+16506199010"
         },
         {
-            "_id": "Jordan",
-            "UserNumber": "+18478484251"
-        },
-        {
-            "_id": "Mash",
+            "id": "Mash",
             "UserNumber": "+19167593968"
         }
     ]
