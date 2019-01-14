@@ -25,6 +25,7 @@ def text_chella():
     db = db_client['textchella']
 
     todays_artist = get_todays_artist()
+    welcome_text = "Welcome back to TextChella! Every morning, we'll send you a text with a countdown until Coachella and a random curated artist from the lineup for you to listen to! If you would like to opt out, just text back STOP!"
 
     users = db.Users.find()
     num_users = users.count()
@@ -50,8 +51,15 @@ def text_chella():
         }
     ]
 
+    days = days_until_coachella()
+
+
     for user in test_users:
+        if days == 87: #Change this number to reflect our starting date
+            twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=welcome_text)   
+
         twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
+
 
 def get_todays_artist(new_user=False):
     db_client = get_connection()
@@ -77,7 +85,7 @@ def get_todays_artist(new_user=False):
     message = sun_emoji + "\n\n" + str(days) + " days until the festival!" + tree_emoji + "\n\n" + "Here is your song of the day!" + "\n\n" + "Artist Name: " + artist_name + "\n\n" + "Genre: " + artist_genre + "\n\n" + "Bio: " + artist_description + "\n\n" + "Featured Song: \n" + artist_link
 
     if new_user:
-        return "Welcome to Text Chella!" + message
+        return "Welcome to TextChella!" + message
 
     return "Good Morning!" + message
 
