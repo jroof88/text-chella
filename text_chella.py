@@ -26,7 +26,7 @@ def text_chella():
     days = days_until_coachella()
 
     todays_artist = get_todays_artist()
-    welcome_text = "Welcome back to TextChella! Every morning, we'll send you a text with a countdown until Coachella and a random curated artist from the lineup for you to listen to! If you would like to opt out, just text back STOP!"
+    welcome_text = "Welcome back to TextChella! Every morning, we'll send you a text with a countdown until Coachella and a random curated artist from the lineup for you to listen to!"
 
     users = db.Users.find()
     num_users = users.count()
