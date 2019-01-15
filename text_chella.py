@@ -40,14 +40,6 @@ def text_chella():
         {
             "id": "Jack",
             "UserNumber": "+12038565701"
-        },
-        {
-            "id": "McKenna",
-            "UserNumber": "+16506199010"
-        },
-        {
-            "id": "Mash",
-            "UserNumber": "+19167593968"
         }
     ]
 
