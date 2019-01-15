@@ -23,31 +23,17 @@ def text_chella():
     twilio_client = get_twilio_client()
     db_client = get_connection()
     db = db_client['textchella']
+    days = days_until_coachella()
 
     todays_artist = get_todays_artist()
     welcome_text = "Welcome back to TextChella! Every morning, we'll send you a text with a countdown until Coachella and a random curated artist from the lineup for you to listen to! If you would like to opt out, just text back STOP!"
 
     users = db.Users.find()
     num_users = users.count()
-    send_report(num_users, days_until_coachella())
-    # load_analytics(num_users)
+    send_report(num_users, days)
 
-    test_users = [
-        {
-            "id": "Sanjay",
-            "UserNumber": "+19164708305"
-        },
-        {
-            "id": "Jack",
-            "UserNumber": "+12038565701"
-        }
-    ]
-
-    days = days_until_coachella()
-
-
-    for user in test_users:
-        if days == 87: #Change this number to reflect our starting date
+    for user in users:
+        if days == 86: #Change this number to reflect our starting date
             twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=welcome_text)   
 
         twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
