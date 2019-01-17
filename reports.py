@@ -31,6 +31,19 @@ def generate_daily_report(num_users, days_until_coachella):
     return report
 
 
-def send_new_sub_report():
+def send_new_sub_report(number):
     gmail_server = get_email_server()
+    report = generate_new_sub_report(number)
+    gmail_server.sendmail(report['From'], 'sanjay.tamizharasu@gmail.com', report.as_string())
+    gmail_server.sendmail(report['From'], 'johnroof8@gmail.com', report.as_string())
+    gmail_server.close()
 
+
+def generate_new_sub_report(number):
+    report = MIMEMultipart('mixed')
+    report['From'] = 'textchella@gmail.com'
+    report['Subject'] = 'New Subscriber!'
+    report_body = MIMEText('New Subscriber! \n' +
+                           number)
+    report.attach(report_body)
+    return report
