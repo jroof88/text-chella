@@ -3,7 +3,7 @@ import os
 import datetime
 import emoji
 from twilio.rest import Client
-from reports import send_daily_report
+from reports import send_daily_report, send_new_sub_report
 
 
 def get_twilio_client():
@@ -26,16 +26,11 @@ def text_chella():
     days = days_until_coachella()
 
     todays_artist = get_todays_artist()
-    welcome_text = "Welcome back to TextChella! Every morning, we'll send you a text with a countdown until Coachella and a random curated artist from the lineup for you to listen to!"
-
     users = db.Users.find()
     num_users = users.count()
     send_daily_report(num_users, days)
 
     for user in users:
-        if days == 86: #Change this number to reflect our starting date
-            twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=welcome_text)
-
         twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
 
 
@@ -97,16 +92,13 @@ def is_user(phone_number):
 
 
 def subscribe(phone_number):
-    twilio_client = get_twilio_client()
     db_client = get_connection()
     user_collection = db_client['textchella']['Users']
     user_collection.insert({
         "UserNumber": phone_number
     })
 
-    new_subscriber_message = "New Subscriber! :" + str(phone_number)
-    twilio_client.messages.create(to="+19164708305", from_="+16505390580", body=new_subscriber_message)
-    twilio_client.messages.create(to="+12038565701", from_="+16505390580", body=new_subscriber_message)
+    send_new_sub_report(phone_number)
     return get_todays_artist(new_user=True)
 
 

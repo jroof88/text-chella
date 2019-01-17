@@ -43,7 +43,6 @@ def generate_new_sub_report(number):
     report = MIMEMultipart('mixed')
     report['From'] = 'textchella@gmail.com'
     report['Subject'] = 'New Subscriber!'
-    report_body = MIMEText('New Subscriber! \n' +
-                           number)
+    report_body = MIMEText('New Subscriber! \n' + str(number))
     report.attach(report_body)
     return report

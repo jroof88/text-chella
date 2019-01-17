@@ -18,7 +18,7 @@ def response():
         delete_user(incoming_number)
         return ''
     else:
-        if is_user(incoming_number) == False:
+        if not is_user(incoming_number):
             msg = subscribe(incoming_number)
             resp.message(msg)
             return str(resp)
