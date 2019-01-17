@@ -11,15 +11,15 @@ def get_email_server():
     return gmail_server
 
 
-def send_report(num_users, days_until_coachella):
+def send_daily_report(num_users, days_until_coachella):
     gmail_server = get_email_server()
-    report = generate_report(num_users, days_until_coachella)
+    report = generate_daily_report(num_users, days_until_coachella)
     gmail_server.sendmail(report['From'], 'sanjay.tamizharasu@gmail.com', report.as_string())
     gmail_server.sendmail(report['From'], 'johnroof8@gmail.com', report.as_string())
     gmail_server.close()
 
 
-def generate_report(num_users, days_until_coachella):
+def generate_daily_report(num_users, days_until_coachella):
     report = MIMEMultipart('mixed')
     report['From'] = 'textchella@gmail.com'
     report['Subject'] = 'Text Chella Daily Report For ' + datetime.datetime.today().strftime('%m-%d-%Y')
@@ -29,3 +29,8 @@ def generate_report(num_users, days_until_coachella):
                            )
     report.attach(report_body)
     return report
+
+
+def send_new_sub_report():
+    gmail_server = get_email_server()
+

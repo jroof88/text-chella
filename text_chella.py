@@ -3,7 +3,7 @@ import os
 import datetime
 import emoji
 from twilio.rest import Client
-from daily_report import send_report
+from reports import send_daily_report
 
 
 def get_twilio_client():
@@ -30,11 +30,11 @@ def text_chella():
 
     users = db.Users.find()
     num_users = users.count()
-    send_report(num_users, days)
+    send_daily_report(num_users, days)
 
     for user in users:
         if days == 86: #Change this number to reflect our starting date
-            twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=welcome_text)   
+            twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=welcome_text)
 
         twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
 
