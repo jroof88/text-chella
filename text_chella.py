@@ -1,7 +1,9 @@
 from pymongo import MongoClient
 import os
 import datetime
+import time
 import emoji
+from twilio.base import exceptions
 from twilio.rest import Client
 from reports import send_daily_report, send_new_sub_report
 
@@ -30,8 +32,14 @@ def text_chella():
     num_users = users.count()
     send_daily_report(num_users, days)
 
-    for user in users:
-        twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
+    for idx, user in enumerate(users):
+        try:  # Try to send message
+            twilio_client.messages.create(to=user["UserNumber"], from_="+16505390580", body=todays_artist)
+            print("Send Success. Message #: " + str(idx))  # Print success
+        except exceptions.TwilioRestException or exceptions.TwilioException:  # Catch twilio exception if occured
+            print("Exception Caught. Phone #: " + str(user) + ". Message #: " + str(idx))  # Print exception
+
+        time.sleep(1)  # https://stackoverflow.com/questions/45883737/503-error-while-trying-to-send-sms-with-twilio
 
 
 def get_todays_artist(new_user=False):
